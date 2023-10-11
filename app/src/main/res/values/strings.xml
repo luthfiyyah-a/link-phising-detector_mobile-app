@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Go Link</string>
+    <string name="title_home">Home</string>
+    <string name="title_artikel">Artikel</string>
+
+    <string name="title_splashscreen">Link Phising\nDetector</string>
+    <string name="description_splashscreen">
+            Mendeteksi link phising
+        </string>
+
+    <string name="checkPhishingLinkPrompt_main">
+        Apakah link tersebut phising? Cek di sini
+    </string>
+
+    <string name="submitLinkButton_main">
+        Cek
+    </string>
+</resources>
