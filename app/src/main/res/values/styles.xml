@@ -15,6 +15,7 @@
     <style name="checkLinkPrompt">
         <item name="android:textSize">26sp</item>
         <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
 </resources>

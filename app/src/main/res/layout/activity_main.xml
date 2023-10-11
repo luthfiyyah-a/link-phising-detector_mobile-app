@@ -65,7 +65,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginEnd="8dp"
                 android:text="@string/submitLinkButton_main"
-                android:background="@color/yellow"/>
+                android:background="@drawable/rounded_button"/>
         </RelativeLayout>
 
     </LinearLayout>
