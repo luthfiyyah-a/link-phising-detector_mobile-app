@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Go Link</string>
+    <string name="title_dashboard">Dashbboard</string>
+    <string name="title_notifications">Notification</string>
     <string name="title_home">Home</string>
     <string name="title_artikel">Artikel</string>
 
