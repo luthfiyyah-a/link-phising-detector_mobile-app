@@ -1,20 +1,15 @@
 <resources>
-    <string name="app_name">Go Link</string>
+    <string name="app_name">Go Link Kita</string>
     <string name="title_dashboard">Dashbboard</string>
     <string name="title_notifications">Notification</string>
     <string name="title_home">Home</string>
     <string name="title_artikel">Artikel</string>
 
     <string name="title_splashscreen">Link Phising\nDetector</string>
-    <string name="description_splashscreen">
-            Mendeteksi link phising
-        </string>
+    <string name="description_splashscreen">Mendeteksi link phising</string>
+    <string name="checkPhishingLinkPrompt_main">Apakah link tersebut phising? Cek di sini</string>
 
-    <string name="checkPhishingLinkPrompt_main">
-        Apakah link tersebut phising? Cek di sini
-    </string>
+    <string name="submitLinkButton_main">Cek</string>
 
-    <string name="submitLinkButton_main">
-        Cek
-    </string>
+    <string name="login_button_submit">Login</string>
 </resources>
