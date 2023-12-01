@@ -10,11 +10,14 @@
         android:id="@+id/etEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="masukkan email"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="125dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -33,10 +36,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toEndOf="@+id/etPassword"
         app:layout_constraintStart_toStartOf="@+id/etPassword"
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        tools:srcCompat="@tools:sample/avatars" />
+        />
 
     <Button
         android:id="@+id/button"
@@ -46,5 +50,17 @@
         android:onClick="buLogin"
         android:text="@string/login_button_submit"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="163dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Masuk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

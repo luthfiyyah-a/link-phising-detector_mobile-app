@@ -25,24 +25,22 @@
             <TextView
                 android:id="@+id/title_splashscreen"
                 android:layout_width="226dp"
-                android:layout_height="88dp"
-                android:text="@string/title_splashscreen"
-                android:textAppearance="@style/title_splashscreen"
-                android:lineSpacingExtra="-4sp"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal|top"
-                />
+                android:lineSpacingExtra="-4sp"
+                android:text="@string/title_splashscreen"
+                android:textAppearance="@style/title_splashscreen" />
 
             <TextView
                 android:id="@+id/description_splashscreen"
                 android:layout_width="183dp"
-                android:layout_height="22dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal|top"
+                android:lineSpacingExtra="3sp"
                 android:text="@string/description_splashscreen"
                 android:textAppearance="@style/description_splashscreen"
-                android:lineSpacingExtra="3sp"
-                android:translationY="-1.52sp"
-                android:gravity="center_horizontal|top"
-                android:layout_marginTop="16dp"
-                />
+                android:translationY="-1.52sp" />
         </LinearLayout>
 
 
