@@ -6,6 +6,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
+import com.fp.golink.ui.dashboard.DashboardFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.fp.golink.ui.home.HomeFragment
+import com.fp.golink.ui.post.PostFragment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -18,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var urlInput: EditText
     private lateinit var resultText: TextView
     private lateinit var submitButton: Button
+    private lateinit var nav_view: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,11 +34,41 @@ class MainActivity : AppCompatActivity() {
         resultText = findViewById(R.id.resultText)
         submitButton = findViewById(R.id.submitButton)
 
+        nav_view = findViewById(R.id.nav_view)
+        nav_view.setOnNavigationItemSelectedListener(onBottomNavListener)
+        var fr = supportFragmentManager.beginTransaction()
+        fr.replace(R.id.fl_fragment, HomeFragment())
+        fr.commit()
+
         submitButton.setOnClickListener {
             val url = urlInput.text.toString()
             val inputData = preprocessURL(url)
             classifyURL(inputData)
         }
+    }
+
+    private val onBottomNavListener = BottomNavigationView.OnNavigationItemSelectedListener { i ->
+        var selectedFr: Fragment = HomeFragment()
+
+        when(i.itemId) {
+            R.id.navigation_home -> {
+                selectedFr= HomeFragment()
+                Log.d("MAIN", "kepanggil home nya")
+            }
+            R.id.navigation_dashboard -> {
+                selectedFr= DashboardFragment()
+                Log.d("MAIN", "kepanggil dashboard nya")
+            }
+            R.id.navigation_post -> {
+                selectedFr= PostFragment()
+                Log.d("MAIN", "kepanggil post nya")
+            }
+        }
+
+        var fr = supportFragmentManager.beginTransaction()
+        fr.replace(R.id.fl_fragment, selectedFr)
+        fr.commit()
+        true
     }
 
     private fun preprocessURL(url: String): String {

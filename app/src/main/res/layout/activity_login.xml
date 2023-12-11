@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_title"
+            android:textAlignment="center"
+            android:textAppearance="@style/titlePost"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:padding="10dp"
+            android:minHeight="48dp"
+            android:hint="Masukkan Email"
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:padding="10dp"
+            android:minHeight="48dp"
+            android:hint="Masukkan Password"
+            android:inputType="textPassword"
+            />
+
+        <Button
+            android:id="@+id/login_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/common_signin_button_text"
+            android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/login_ask_have_acc" />
+
+            <TextView
+                android:id="@+id/login_goToRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/fui_linkColor"
+                android:text="@string/register_title"
+                android:clickable="true"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

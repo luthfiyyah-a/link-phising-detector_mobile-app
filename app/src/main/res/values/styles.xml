@@ -34,5 +34,24 @@
         <item name="android:textStyle">normal</item>
         <item name="android:fontFamily">@font/poppin_bold</item>
     </style>
+    <style name="postTulisan">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/abu_tulisan</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="postJudul">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/abu_tulisan</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="postUsername">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/abu_tulisan</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
 
 </resources>

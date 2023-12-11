@@ -4,6 +4,7 @@
     <string name="title_notifications">Notification</string>
     <string name="title_home">Home</string>
     <string name="title_artikel">Artikel</string>
+    <string name="title_post">Post</string>
 
     <string name="title_splashscreen">Link Phising\nDetector</string>
     <string name="description_splashscreen">
@@ -21,4 +22,8 @@
     <string name="hintInput_addPost">
         Apa yang ingin Anda bicarakan?
     </string>
+    <string name="register_title">Register</string>
+    <string name="login_title">Login</string>
+    <string name="register_ask_have_acc">sudah memiliki akun?</string>
+    <string name="login_ask_have_acc">belum memiliki akun?</string>
 </resources>

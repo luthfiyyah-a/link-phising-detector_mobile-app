@@ -11,4 +11,8 @@
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="@string/title_artikel" />
 
+    <item
+        android:id="@+id/navigation_post"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_post" />
 </menu>

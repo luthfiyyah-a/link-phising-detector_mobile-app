@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:padding="20dp"
     app:cardCornerRadius="10dp"
-    app:cardBackgroundColor="@color/cardview_dark_background">
+    app:cardBackgroundColor="@color/cardview_light_background">
 
 
     <LinearLayout
@@ -36,7 +36,8 @@
                 android:id="@+id/tv_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Username1" />
+                android:text="Username1"
+                android:textAppearance="@style/postUsername"/>
 
         </LinearLayout>
 
@@ -50,10 +51,18 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
             <TextView
+                android:id="@+id/tv_post_judul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textAppearance="@style/postJudul"/>
+
+            <TextView
                 android:id="@+id/tv_post_tulisan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textAppearance="@style/postTulisan"/>
 
             <ImageView
                 android:id="@+id/iv_post_gambar"
@@ -67,10 +76,13 @@
             android:layout_height="wrap_content"
             android:gravity="end">
 
-            <ImageButton
+            <ImageView
+                android:id="@+id/btn_deleteItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
                 android:src="@drawable/ic_delete" />
         </LinearLayout>
 
