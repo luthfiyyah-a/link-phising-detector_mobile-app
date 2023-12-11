@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.fp.golink.auth.RegisterActivity
@@ -20,6 +21,7 @@ class AddPostActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var etPost : EditText
     private lateinit var etPostJudul : EditText
     private lateinit var btnSubmitPost : Button
+    private lateinit var btnBack : ImageView
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var authStateListener: FirebaseAuth.AuthStateListener
 
@@ -45,9 +47,14 @@ class AddPostActivity : AppCompatActivity(), View.OnClickListener {
         etPostJudul = findViewById(R.id.etPostJudul)
         btnSubmitPost = findViewById(R.id.btnSubmitPost)
 
+        btnBack = findViewById(R.id.iv_back)
+
         firebaseAuth = Firebase.auth
 
         btnSubmitPost.setOnClickListener(this)
+        btnBack.setOnClickListener{
+            onBackPressed()
+        }
 
         // Inisialisasi authStateListener
         authStateListener = FirebaseAuth.AuthStateListener { firebaseAuth ->

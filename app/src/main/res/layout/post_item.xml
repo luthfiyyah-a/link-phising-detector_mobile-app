@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:padding="20dp"
     app:cardCornerRadius="10dp"
-    app:cardBackgroundColor="@color/cardview_light_background">
+    app:cardBackgroundColor="@color/cardview_light_background"
+    android:background="@drawable/border_bottom_item">
 
 
     <LinearLayout
@@ -85,6 +86,11 @@
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/ic_delete" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_gravity="bottom"/>
 
     </LinearLayout>
 

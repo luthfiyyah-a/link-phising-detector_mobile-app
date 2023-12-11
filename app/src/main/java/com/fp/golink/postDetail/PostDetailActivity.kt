@@ -12,6 +12,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.fp.golink.R
 import com.fp.golink.postList.PostsListActivity
+import com.fp.golink.ui.post.PostFragment
 import com.google.firebase.database.FirebaseDatabase
 
 class PostDetailActivity : AppCompatActivity() {
@@ -41,7 +42,7 @@ class PostDetailActivity : AppCompatActivity() {
         builder.setTitle("Hapus Post?")
         builder.setMessage("Apakah kamu ingin menghapus post ini?")
         builder.setPositiveButton("Iya"){ dialogInterface, which ->
-            deleteRow(intent.getStringExtra("postId").toString())
+            deleteRow(intent.getStringExtra("authorId").toString(), intent.getStringExtra("postId").toString())
         }
         builder.setNegativeButton("Batal"){dialogInterface, which ->
 
@@ -51,15 +52,13 @@ class PostDetailActivity : AppCompatActivity() {
         alertDialog.show()
     }
 
-    private fun deleteRow(id: String) {
-        val ref = FirebaseDatabase.getInstance("https://todo-list-tutorial1-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("posts").child(id)
+    private fun deleteRow(authorId: String, postId: String) {
+        val ref = FirebaseDatabase.getInstance("https://todo-list-tutorial1-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("posts").child(authorId).child(postId)
         val mTask = ref.removeValue()
 
         mTask.addOnCompleteListener {
             Toast.makeText(this, "Post berhasil dihapus", Toast.LENGTH_LONG).show()
-            val intent = Intent(this, PostsListActivity::class.java)
-            finish()
-            startActivity(intent)
+            navigateToPostFragment()
         }.addOnFailureListener{ error ->
             Toast.makeText(this, "Gagal menghapus: ${error.message}",  Toast.LENGTH_LONG).show()
         }
@@ -80,6 +79,24 @@ class PostDetailActivity : AppCompatActivity() {
         tvPostJudul.text = intent.getStringExtra("postJudul")
         tvPostTulisan.text = intent.getStringExtra("postTulisan")
 //        ivPostGambar.setImageBitmap("postGambar")
+    }
+
+    private fun navigateToPostFragment() {
+        // Buat instance dari FragmentManager
+        val fragmentManager = supportFragmentManager
+
+        // Mulai transaksi fragment
+        val transaction = fragmentManager.beginTransaction()
+
+        // Ganti fragment saat ini dengan fragment Post
+        val postFragment = PostFragment()
+        transaction.replace(R.id.fl_fragment, postFragment)
+
+        // Tambahkan transaksi ke back stack agar dapat kembali menggunakan tombol back
+        transaction.addToBackStack(null)
+
+        // Lakukan transaksi
+        transaction.commit()
     }
 
 }

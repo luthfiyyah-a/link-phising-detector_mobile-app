@@ -100,7 +100,7 @@ class PostsListActivity : AppCompatActivity() {
                                         val usernameAuthor = user?.username
                                         Log.d("LIST", "titik ambil user: ${user}")
 
-                                        val postWithAuthor = PostWithAuthor(id, judul, tulisan, usernameAuthor)
+                                        val postWithAuthor = PostWithAuthor(id, judul, tulisan, usernameAuthor, userId)
                                         postWithAuthorList.add(postWithAuthor!!)
                                     }
                                 })
