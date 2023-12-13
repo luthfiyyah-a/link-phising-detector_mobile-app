@@ -6,14 +6,12 @@
     <string name="title_artikel">Artikel</string>
 
     <string name="title_splashscreen">Link Phising\nDetector</string>
-    <string name="description_splashscreen">
-            Mendeteksi link phising
-        </string>
+    <string name="description_splashscreen">Mendeteksi link phising</string>
+    <string name="checkPhishingLinkPrompt_main">Apakah link tersebut phising? Cek di sini</string>
 
-    <string name="checkPhishingLinkPrompt_main">
-        Apakah link tersebut phising? Cek di sini
-    </string>
+    <string name="submitLinkButton_main">Cek</string>
 
+<<<<<<< HEAD
     <string name="submitLinkButton_main">
         Cek
     </string>
@@ -21,4 +19,7 @@
     <string name="hintInput_addPost">
         Apa yang ingin Anda bicarakan?
     </string>
+=======
+    <string name="login_button_submit">Login</string>
+>>>>>>> d03e386b1a828ae67940e1412a7208e6c5ca8104
 </resources>

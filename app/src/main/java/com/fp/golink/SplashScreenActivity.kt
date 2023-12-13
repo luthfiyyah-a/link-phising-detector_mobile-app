@@ -15,7 +15,7 @@ class SplashScreenActivity: AppCompatActivity () {
         setContentView(R.layout.splash_screen)
 
         Handler().postDelayed({
-            val mainIntent = Intent(this, MainActivity::class.java)
+            val mainIntent = Intent(this, Login::class.java)
             startActivity(mainIntent)
             Log.d("LUTH", "harusnya pindah")
             finish()
