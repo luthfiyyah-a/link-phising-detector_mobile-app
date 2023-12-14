@@ -3,12 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
     <!-- Internet Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
-<<<<<<< HEAD
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-=======
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
->>>>>>> d03e386b1a828ae67940e1412a7208e6c5ca8104
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
